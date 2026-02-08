@@ -284,7 +284,7 @@ const Journey = () => {
                             </div>
 
                             {/* Content Section */}
-                            <div className="w-full md:w-[40%] p-6 md:p-10 flex flex-col justify-center items-center text-center bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] overflow-y-auto relative">
+                            <div className="w-full md:w-[40%] p-6 md:p-10 flex flex-col justify-start md:justify-center items-center text-center bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] overflow-y-auto relative">
                                 <span className="font-medieval text-gold-700 text-lg uppercase tracking-widest mb-4">
                                     {new Date(selectedDay.date).toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' })}
                                 </span>
