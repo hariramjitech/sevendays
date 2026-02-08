@@ -236,7 +236,7 @@ const Journey = () => {
                             initial={{ scale: 0.9, y: 50, opacity: 0 }}
                             animate={{ scale: 1, y: 0, opacity: 1 }}
                             exit={{ scale: 0.9, y: 50, opacity: 0 }}
-                            className="relative w-full max-w-[95vw] h-[90vh] md:h-[95vh] flex flex-col md:flex-row bg-parchment-200 rounded-lg shadow-[0_0_100px_rgba(212,175,55,0.15)] overflow-hidden border-4 border-double border-gold-700"
+                            className="relative w-full max-w-[95vw] h-[85vh] md:h-[95vh] flex flex-col md:flex-row bg-parchment-200 rounded-lg shadow-[0_0_100px_rgba(212,175,55,0.15)] overflow-hidden border-4 border-double border-gold-700"
                             onClick={e => e.stopPropagation()}
                         >
                             <button
@@ -252,7 +252,7 @@ const Journey = () => {
                             </button>
 
                             {/* Image Section - Advanced Zoom */}
-                            <div className="w-full md:w-[60%] h-[50%] md:h-full bg-black/90 relative group border-b-4 md:border-b-0 md:border-r-4 border-gold-700 overflow-hidden">
+                            <div className="w-full md:w-[60%] h-[40vh] md:h-full bg-black/90 relative group border-b-4 md:border-b-0 md:border-r-4 border-gold-700 overflow-hidden flex-shrink-0">
                                 <ZoomableImage
                                     src={`/posters/${String(new Date(selectedDay.date).getDate()).padStart(2, '0')}.jpg`}
                                     alt={selectedDay.title}
