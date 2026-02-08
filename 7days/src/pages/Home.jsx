@@ -12,7 +12,7 @@ const Home = () => {
     const [isLetterOpen, setIsLetterOpen] = useState(false);
 
     return (
-        <div className="min-h-screen relative flex flex-col items-center justify-center p-6 overflow-hidden text-center bg-transparent">
+        <div className="min-h-screen relative flex flex-col items-center justify-center p-6 overflow-y-auto overflow-x-hidden text-center bg-transparent">
             <Fireflies />
 
             <LoveLetterModal isOpen={isLetterOpen} onClose={() => setIsLetterOpen(false)} />
@@ -25,7 +25,7 @@ const Home = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2 }}
-                className="z-10 max-w-4xl mx-auto flex flex-col items-center w-full h-full justify-center gap-4 md:gap-8"
+                className="z-10 max-w-4xl mx-auto flex flex-col items-center w-full justify-center gap-3 md:gap-5 py-8 md:py-0"
             >
                 <motion.div
                     initial={{ scale: 0.9, opacity: 0 }}
@@ -43,7 +43,7 @@ const Home = () => {
                             scale: [1, 1.02, 1]
                         }}
                         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                        className="text-6xl md:text-8xl font-medieval bg-clip-text text-transparent bg-gradient-to-b from-alt-gold via-gold-500 to-blood-700 drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)] tracking-widest uppercase mb-1"
+                        className="text-5xl md:text-7xl font-medieval bg-clip-text text-transparent bg-gradient-to-b from-alt-gold via-gold-500 to-blood-700 drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)] tracking-widest uppercase mb-1"
                         style={{ backgroundImage: 'linear-gradient(to bottom, #f3e5ab, #d4af37, #8a1c1c)' }}
                     >
                         Harsha
@@ -54,7 +54,7 @@ const Home = () => {
                 </motion.div>
 
                 <motion.div
-                    className="glass-panel-medieval p-6 md:p-8 rounded-xl max-w-3xl mx-auto relative overflow-hidden group w-full border-2 border-gold-500/30 shadow-[0_0_50px_rgba(138,28,28,0.2)] flex flex-col justify-center"
+                    className="glass-panel-medieval p-5 md:p-6 rounded-xl max-w-3xl mx-auto relative overflow-hidden group w-full border-2 border-gold-500/30 shadow-[0_0_50px_rgba(138,28,28,0.2)] flex flex-col justify-center"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.8, duration: 1.5 }}
@@ -96,7 +96,7 @@ const Home = () => {
                 >
                     <button
                         onClick={() => navigate('/journey')}
-                        className="group relative px-10 py-4 bg-blood-900 border-2 border-gold-500 text-gold-100 font-medieval text-lg md:text-2xl tracking-widest uppercase rounded-lg cursor-pointer overflow-hidden transition-all hover:shadow-[0_0_30px_rgba(138,28,28,0.6)]"
+                        className="group relative px-8 py-3 bg-blood-900 border-2 border-gold-500 text-gold-100 font-medieval text-lg md:text-xl tracking-widest uppercase rounded-lg cursor-pointer overflow-hidden transition-all hover:shadow-[0_0_30px_rgba(138,28,28,0.6)]"
                     >
                         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/wood-pattern.png')] opacity-30"></div>
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
