@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --color-parchment-100: #fdfbf7;
+  --color-parchment-200: #f7f1e3;
+  --color-parchment-300: #efe6d0;
+  --color-parchment-400: #e6dcb8;
+  --color-parchment-500: #d4c59a;
+  --color-parchment-900: #3e3221;
+
+  --color-blood-500: #8a1c1c;
+  --color-blood-700: #5e0b0b;
+  --color-blood-900: #380404;
+
+  --color-gold-300: #f3e5ab;
+  --color-gold-500: #d4af37;
+  --color-gold-700: #aa8c2c;
+  --color-gold-900: #785c18;
+
+  --color-midnight-800: #1a1a2e;
+  --color-midnight-900: #0f0f1a;
+
+  --font-medieval: "Cinzel", serif;
+  --font-scroll: "Playfair Display", serif;
+  --font-handwritten: "Dancing Script", cursive;
+
+  --animate-flicker: flicker 3s infinite;
+
+  @keyframes flicker {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.8;
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-midnight-900 text-parchment-200 font-scroll;
+  }
+}
+
+.glass-panel-medieval {
+  @apply bg-black/40 backdrop-blur-md border border-gold-500/30;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5), 0 0 20px rgba(138, 28, 28, 0.3);
+}
+
+/* Custom Scrollbar for Webkit */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+  /* midnight-800 */
+  border-left: 1px solid #3e3221;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #aa8c2c, #d4af37, #aa8c2c);
+  /* gold gradient */
+  border-radius: 5px;
+  border: 2px solid #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+  /* gold-500 */
+}
+
+/* Firefox Scrollbar Support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #d4af37 #1a1a2e;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
