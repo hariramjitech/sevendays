@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-rose-50 text-slate-900;
+  }
+
+  @keyframes heart-fill {
+    0% {
+      clip-path: inset(100% 0 0 0);
+    }
+
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  .animate-heart-fill {
+    animation: heart-fill 3s ease-in-out forwards;
+  }
+}
